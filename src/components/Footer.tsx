@@ -30,7 +30,7 @@ export function Footer(): React.ReactElement {
                 <NavLink href="/projects">Projects</NavLink>
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} Spencer Sharp. All rights
+                &copy; {new Date().getFullYear()} Deepak Prajapati. All rights
                 reserved.
               </p>
             </div>
