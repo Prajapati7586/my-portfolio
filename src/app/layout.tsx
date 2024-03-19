@@ -6,10 +6,12 @@ import "@/styles/tailwind.css";
 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import Head from "next/head";
 
 export const metadata: Metadata = {
-  title: "Deepak Prajapati - Software Engineer",
+  title: "Deepak Prajapati - Software engineer, blockchain developer.",
   description: "Portfolio website",
+  icons: "/favicon.ico",
 };
 
 export default function RootLayout({

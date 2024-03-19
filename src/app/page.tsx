@@ -15,7 +15,7 @@ import image2 from "@/images/photos/image-2.jpg";
 import image3 from "@/images/photos/image-3.jpg";
 import image4 from "@/images/photos/image-4.jpg";
 import image5 from "@/images/photos/image-5.jpg";
-import logoPlanetaria from "@/images/logos/planetaria.svg";
+import logoPlanetaria from "@/images/logos/e2elogo.jpeg";
 import {
   BriefcaseIcon,
   GitHubIcon,
@@ -32,9 +32,11 @@ import {
 
 function Article({ article }) {
   return (
-    <Card>
+    <Card as="article">
       <CardTitle href={`/articles/${article.slug}`}>{article.title}</CardTitle>
-      <CardTimeSlot decorate>{formatDate(article.date)}</CardTimeSlot>
+      <CardTimeSlot as="time" decorate>
+        {formatDate(article.date)}
+      </CardTimeSlot>
       <CardDescription>{article.description}</CardDescription>
       <CardCta>Read article</CardCta>
     </Card>
@@ -94,10 +96,6 @@ function Resume(): React.ReactElement {
           </li>
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
     </div>
   );
 }
@@ -143,11 +141,12 @@ export default function Home(): React.ReactElement {
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Software engineer, blockchain developer.
           </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Deepak, a software engineer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+          <p className="mt-6 text-base text-zinc-600 text-justify dark:text-zinc-400">
+            I&apos;m Deepak, a software engineer with a passion for blockchain
+            development, crafting innovative solutions that blend cutting-edge
+            technology with user-centric design. My work aims to push the
+            boundaries of what&apos;s possible in both software and blockchain
+            realms.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -168,7 +167,7 @@ export default function Home(): React.ReactElement {
           </div>
         </div>
       </Container>
-      <Photos />
+      {/* <Photos /> */}
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
@@ -176,7 +175,9 @@ export default function Home(): React.ReactElement {
               <Article key={article.slug} article={article} />
             ))} */}
           </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-24">{/* <Resume /> */}</div>
+          <div className="space-y-10 lg:pl-16 xl:pl-24">
+            <Resume />
+          </div>
         </div>
       </Container>
     </>

@@ -1,5 +1,3 @@
-import Head from "next/head";
-
 import {
   Card,
   CardCta,
@@ -7,15 +5,14 @@ import {
   CardTimeSlot,
   CardTitle,
 } from "@/components/Card";
-import { SimpleLayout } from "@/components/SimpleLayout";
+import SimpleLayout from "@/components/SimpleLayout";
 import { formatDate } from "@/utils/formatDate";
-import { getAllArticles } from "@/utils/getAllArticles";
 
 interface BlogProps {
   blog: any;
 }
 
- function BlogCard({ blog }: BlogProps) {
+function BlogCard({ blog }: BlogProps) {
   return (
     <article className="md:grid md:grid-cols-4 md:items-baseline">
       <Card className="md:col-span-3">
@@ -36,16 +33,9 @@ interface BlogProps {
 export default function Blogs() {
   return (
     <>
-      <Head>
-        <title>Blogs - Deepak Prajapati</title>
-        <meta
-          name="description"
-          content="All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
-        />
-      </Head>
       <SimpleLayout
-        title="Writing on software design, company building, and the aerospace industry."
-        intro="All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
+        title="I write about programming, software design, and AI."
+        intro="All of my long-form thoughts on programming, block chain, artificial intelligence, and more, collected in chronological order."
       >
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
           <div className="flex max-w-3xl flex-col space-y-16">
@@ -58,11 +48,3 @@ export default function Blogs() {
     </>
   );
 }
-
-// export async function getStaticProps() {
-//   return {
-//     props: {
-//       articles: (await getAllArticles()).map(({ component, ...meta }) => meta),
-//     },
-//   };
-// }
