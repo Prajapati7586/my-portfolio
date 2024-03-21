@@ -2,44 +2,17 @@ import Image from "next/image";
 
 import { Card, CardDescription, CardLink } from "@/components/Card";
 import e2elogo from "@/images/logos/e2elogo.jpeg";
+import mnitmeteorlogo from "@/images/logos/mnitmeteor.svg";
 import SimpleLayout from "@/components/SimpleLayout";
 import { LinkIcon } from "@/components/icons";
 
 const projects = [
   {
-    name: "Planetaria",
+    name: "mnitmeteor",
     description:
-      "Creating technology to empower civilians to explore space on their own terms.",
-    link: { href: "http://planetaria.tech", label: "planetaria.tech" },
-    logo: e2elogo,
-  },
-  {
-    name: "Animaginary",
-    description:
-      "High performance web animation library, hand-written in optimized WASM.",
-    link: { href: "#", label: "github.com" },
-    logo: e2elogo,
-  },
-  {
-    name: "HelioStream",
-    description:
-      "Real-time video streaming library, optimized for interstellar transmission.",
-    link: { href: "#", label: "github.com" },
-    logo: e2elogo,
-  },
-  {
-    name: "cosmOS",
-    description:
-      "The operating system that powers our Planetaria space shuttles.",
-    link: { href: "#", label: "github.com" },
-    logo: e2elogo,
-  },
-  {
-    name: "OpenShuttle",
-    description:
-      "The schematics for the first rocket I designed that successfully made it to orbit.",
-    link: { href: "#", label: "github.com" },
-    logo: e2elogo,
+      "A multi-featured website where NIT Jaipur students can buy/sell things, discuss their projects, and find their lost items by sharing item detail in the lost&Found section.",
+    link: { href: "https://mnitmeteor.com", label: "mnitmeteor" },
+    logo: mnitmeteorlogo,
   },
 ];
 
@@ -47,8 +20,8 @@ export default function Projects() {
   return (
     <>
       <SimpleLayout
-        title="Things I’ve made trying to put my dent in the universe."
-        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+        title="Things I’ve made while learning and   as a software engineer."
+        intro="I've worked on numerous small and large projects over the years, but these are the ones that have stuck with me."
       >
         <ul
           role="list"

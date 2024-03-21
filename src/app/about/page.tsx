@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
-
 import {
   GitHubIcon,
   LinkedInIcon,
@@ -14,7 +13,6 @@ import {
   TWITTER_ACCOUNT_LINK,
 } from "@/constants/app.const";
 import { Container } from "@/components/Container";
-
 import portraitImage from "@/images/portrait.jpg";
 
 interface SocialLinkProps {
